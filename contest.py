@@ -135,8 +135,7 @@ def process_input_row(in_row, guesser_client):
     print(f"\tCuisine Guess: {guess}")
     guess_row = dict(
         id=row_id,
-        ingredients=", ".join(ingredients),
-        guess=guess
+        cuisine=guess
     )
     return guess_row
 
@@ -149,7 +148,7 @@ def write_csv_file(out_path, out_rows):
     :return:
     """
     with open(out_path, "w") as csv_file:
-        fields = ["id", "ingredients", "guess"]
+        fields = ["id", "cuisine"]
         w = csv.DictWriter(csv_file, fieldnames=fields, quotechar="\"")
         w.writeheader()
         w.writerows(out_rows)

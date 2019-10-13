@@ -30,5 +30,7 @@ You can get this by specifying it as another parameter.
 ./contest.py -t /path/to/test/file.json -o /path/to/output.csv
 ```
 
+I have included a test input and test output file in this repository that correspond with each other. 
+
 ### Dependencies
 * Python 3
